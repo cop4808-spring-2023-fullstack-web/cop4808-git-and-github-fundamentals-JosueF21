@@ -1,4 +1,4 @@
-## Josue Padilla 
+Josue Padilla 
 
 # :wave: The Basics of GitHub 
 
