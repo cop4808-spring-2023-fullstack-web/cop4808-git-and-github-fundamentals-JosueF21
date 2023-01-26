@@ -18,7 +18,7 @@ function updateDisplay() {
         display.innerText = displayValue.substring(0, 9);
     }
 }
-  
+
 updateDisplay();
 
 function clickButton() {
