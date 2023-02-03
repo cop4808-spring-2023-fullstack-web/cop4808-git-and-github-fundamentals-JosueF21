@@ -8,7 +8,7 @@ const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
     const key = document.querySelector(`button[data-key='${e.keyCode}']`);
-    console.log('keypress= ${e.keyCode}')
+    
     key.click();
 });
 
@@ -45,21 +45,21 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear'))  {
                 clearDisplay();
                 updateDisplay();
-
+            // new functions : Squareroot
             } else if(buttons[i].classList.contains('sqrt')) { 
-                squareRoot(displayValue);
+                inputSqrt(displayValue);
                 updateDisplay();
-
+            // new functions : log
             } else if(buttons[i].classList.contains('log'))  {
-            log(displayValue)
-            updateDisplay();
-            
-            } else if(buttons[i].classList.contains('ln'))  {
-              ln(displayValue)
-               updateDisplay();
-
-            } else if(buttons[i].classList.contains('pi'))  
-               pi(displayValue)
+                 inputLog(displayValue);
+                 updateDisplay();
+             // new functions : Cos
+            } else if(buttons[i].classList.contains('cos'))  {
+                  inputCos(displayValue);
+                  updateDisplay();
+              // new functions : Tan
+            } else if(buttons[i].classList.contains('tan'))  
+               inputTan(displayValue);
                 updateDisplay();
         }
    )}
@@ -199,22 +199,22 @@ function operate(x, y, op) {
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
-//Add newly created function
-function squareRoot(num) {
+//Add newly created function Sqrt
+function inputSqrt(num) {
     return displayValue = Math.sqrt(num).toFixed(9);
 }
 
-//Add newly created function
-function log(num) {
+//Add newly created function Log
+function inputLog(num) {
     return displayValue = Math.log(num).toFixed(9);
 }
-//Add newly created function
-function ln(num) {
-    return displayValue = Math.ln(num).toFixed(9);
+//Add newly created function Cos
+function inputCos(num) {
+    return displayValue = Math.cos(num).toFixed(9);
 }
-//Add newly created function
-function pi(num) {
-    return displayValue = Math.pi(num).toFixed(9);
+//Add newly created function Tan
+function inputTan(num) {
+    return displayValue = Math.tan(num).toFixed(9);
 }
 
 
