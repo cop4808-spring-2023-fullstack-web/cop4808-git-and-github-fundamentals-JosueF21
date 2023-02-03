@@ -45,19 +45,18 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear'))  {
                 clearDisplay();
                 updateDisplay();
-           
-        
-            } else if(buttons[i].classList.contains('sqrt'))  {
+
+            } else if(buttons[i].classList.contains('sqrt')) { 
                 squareRoot(displayValue);
                 updateDisplay();
-           
 
+            } else if(buttons[i].classList.contains('log'))  
+            log(displayValue)
+            updateDisplay();
+            
         }
-
-
-         }
-    )}
-}
+   )}
+} 
 
 clickButton();
 
@@ -197,4 +196,10 @@ function roundAccurately(num, places) {
 function squareRoot(num) {
     return displayValue = Math.sqrt(num).toFixed(9);
 }
+
+//Add newly created function
+function log(num) {
+    return displayValue = Math.log(num).toFixed(9);
+}
+
 
