@@ -46,11 +46,11 @@ function clickButton() {
                 clearDisplay();
                 updateDisplay();
            
-             } else if(buttons[i].classList.contains('sqrt'))  {
-                    clearDisplay();
-                    updateDisplay();
-               
-
+        
+            } else if(buttons[i].classList.contains('sqrt'))  {
+                squareRoot(displayValue);
+                updateDisplay();
+           
 
         }
 
@@ -194,7 +194,7 @@ function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 //Add newly created function
-function squartRoot(num) {
-    return displayValue = Math.log(num).toFixed(9);
+function squareRoot(num) {
+    return displayValue = Math.sqrt(num).toFixed(9);
 }
 
