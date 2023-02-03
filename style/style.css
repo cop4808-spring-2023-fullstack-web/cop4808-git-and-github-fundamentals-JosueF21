@@ -112,25 +112,25 @@ button {
     background-color: red;
 }
 .sqrt:active {
-    background-color: red;
+    background-color: dodgerblue;
 }
 .log {
     background-color: red;
 }
 .log:active {
-    background-color: red;
+    background-color: dodgerblue;
 }
 .ln {
     background-color: red;
 }
 .ln:active {
-    background-color: red;
+    background-color: dodgerblue;
 }
 .pi {
     background-color: red;
 }
 .pi:active {
-    background-color: red;
+    background-color: dodgerblue;
 }
 
 

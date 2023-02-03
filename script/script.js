@@ -50,10 +50,17 @@ function clickButton() {
                 squareRoot(displayValue);
                 updateDisplay();
 
-            } else if(buttons[i].classList.contains('log'))  
+            } else if(buttons[i].classList.contains('log'))  {
             log(displayValue)
             updateDisplay();
             
+            } else if(buttons[i].classList.contains('ln'))  {
+              ln(displayValue)
+               updateDisplay();
+
+            } else if(buttons[i].classList.contains('pi'))  
+               pi(displayValue)
+                updateDisplay();
         }
    )}
 } 
@@ -200,6 +207,14 @@ function squareRoot(num) {
 //Add newly created function
 function log(num) {
     return displayValue = Math.log(num).toFixed(9);
+}
+//Add newly created function
+function ln(num) {
+    return displayValue = Math.ln(num).toFixed(9);
+}
+//Add newly created function
+function pi(num) {
+    return displayValue = Math.pi(num).toFixed(9);
 }
 
 
