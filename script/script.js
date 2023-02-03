@@ -41,10 +41,29 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear'))  {
                 clearDisplay();
                 updateDisplay();
+            } else if(buttons[i].classList.contains('power')) { 
+                Power(displayValue);
+                updateDisplay();
+
+            } else if(buttons[i].classList.contains('factorial'))  {
+                inputSign(displayValue);
+                updateDisplay();
+
+            } else if(buttons[i].classList.contains('log')) {
+                log(displayValue);
+                updateDisplay();
+
+
+            } else if(buttons[i].classList.contains('pi')) {
+                pi(displayValue);
+                updateDisplay();
         }
+
+
+    }
     )}
 }
 
