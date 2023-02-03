@@ -8,6 +8,7 @@ const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
     const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+    console.log('keypress= ${e.keyCode}')
     key.click();
 });
 
@@ -44,26 +45,17 @@ function clickButton() {
             } else if(buttons[i].classList.contains('clear'))  {
                 clearDisplay();
                 updateDisplay();
-            } else if(buttons[i].classList.contains('power')) { 
-                power(displayValue);
-                updateDisplay();
-
-            } else if(buttons[i].classList.contains('factorial'))  {
-                factorial(displayValue);
-                updateDisplay();
-
-            } else if(buttons[i].classList.contains('log')) {
-                log(displayValue);
-                updateDisplay();
+           
+             } else if(buttons[i].classList.contains('sqrt'))  {
+                    clearDisplay();
+                    updateDisplay();
+               
 
 
-            } else if(buttons[i].classList.contains('pi')) {
-                pi(displayValue);
-                updateDisplay();
         }
 
 
-    }
+         }
     )}
 }
 
@@ -201,3 +193,8 @@ function operate(x, y, op) {
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
+//Add newly created function
+function squartRoot(num) {
+    return displayValue = Math.log(num).toFixed(9);
+}
+
