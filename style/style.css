@@ -108,27 +108,9 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
-.power {
+.sqrt {
     background-color: red;
 }
-.power:active {
-    background-color: red;
-}
-.factorial{
-    background-color: red;
-}
-.factorial:active {
-    background-color: red;
-}
-.pi {
-    background-color: red;
-}
-.pi:active {
-    background-color: red;
-}
-.log {
-    background-color: red;
-}
-.log:active {
+.sqrt:active {
     background-color: red;
 }
