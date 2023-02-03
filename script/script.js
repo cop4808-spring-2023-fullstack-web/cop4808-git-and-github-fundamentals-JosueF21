@@ -45,11 +45,11 @@ function clickButton() {
                 clearDisplay();
                 updateDisplay();
             } else if(buttons[i].classList.contains('power')) { 
-                Power(displayValue);
+                power(displayValue);
                 updateDisplay();
 
             } else if(buttons[i].classList.contains('factorial'))  {
-                inputSign(displayValue);
+                factorial(displayValue);
                 updateDisplay();
 
             } else if(buttons[i].classList.contains('log')) {
