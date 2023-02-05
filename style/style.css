@@ -108,26 +108,33 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
+
+
 .sqrt {
     background-color: red;
+    font-weight : bold;
 }
 .sqrt:active {
     background-color: dodgerblue;
+   
 }
 .log {
     background-color: red;
+    font-weight : bold;
 }
 .log:active {
     background-color: dodgerblue;
 }
 .cos {
     background-color: red;
+    font-weight : bold;
 }
 .cos:active {
     background-color: dodgerblue;
 }
 .tan {
     background-color: red;
+    font-weight : bold;
 }
 .tan:active {
     background-color: dodgerblue;
