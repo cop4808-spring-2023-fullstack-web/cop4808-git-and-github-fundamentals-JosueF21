@@ -56,7 +56,7 @@ button {
 .operator {
     background-color: #FF8F1F;    
 }
-
+/* Added active features to the reamaining operators */
 .operator:active {
     background-color: #ffc183;    
 }
@@ -115,7 +115,7 @@ button {
     background-color: rgb(123, 189, 255);
 }
 
-
+/*New Classes for the new buttons */ 
 .sqrt {
     background-color: red;
     font-weight : bold;
@@ -124,6 +124,7 @@ button {
     background-color: dodgerblue;
    
 }
+/*New Classes for the new buttons */ 
 .log {
     background-color: red;
     font-weight : bold;
@@ -131,6 +132,7 @@ button {
 .log:active {
     background-color: dodgerblue;
 }
+/*New Classes for the new buttons */ 
 .cos {
     background-color: red;
     font-weight : bold;
@@ -138,6 +140,7 @@ button {
 .cos:active {
     background-color: dodgerblue;
 }
+/*New Classes for the new buttons */ 
 .tan {
     background-color: red;
     font-weight : bold;
