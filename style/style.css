@@ -57,6 +57,12 @@ button {
     background-color: #FF8F1F;    
 }
 
+.operator:active {
+    background-color: #ffc183;    
+}
+
+
+
 .operator:focus {
     background-color: #ffc183;
 }
