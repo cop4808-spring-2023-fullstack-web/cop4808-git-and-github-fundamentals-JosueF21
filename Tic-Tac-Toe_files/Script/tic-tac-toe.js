@@ -51,7 +51,7 @@ function checkWin () {
         statusDisplay.innerHTML = winningMessage();
         gameActive = false;
         statusDisplay.style.color = "rgb(251,100,204)";
-        return;
+        return roundWon;
     }
 
     let roundDraw = !gameState.includes("");
@@ -59,35 +59,13 @@ function checkWin () {
         statusDisplay.innerHTML = drawMessage();
         gameActive = false;
         statusDisplay.style.color = "rgb(251,100,204)";
-        return;
-   
-
+        return roundDraw;
        } 
+       return false;
     }
 
  function handleResultValidation() {
-   /*f let roundWon = false;
-    for (let i = 0; i <= 7; i++) {
-        const winCondition = winningConditions[i];
-        let a = gameState[winCondition[0]];
-        let b = gameState[winCondition[1]];
-        let c = gameState[winCondition[2]];
-        if (a === '' || b === '' || c === '') {
-            continue;
-        }
-        if (a === b && b === c) {
-            roundWon = true;
-            break
-        }
-    }
-
-    if (roundWon) {
-        statusDisplay.innerHTML = winningMessage();
-        gameActive = false;
-        statusDisplay.style.color = "rgb(251,100,204)";
-        return;
-    }
-*/
+   
      checkWin()
 
     if(gameActive) { 
@@ -99,19 +77,22 @@ function checkWin () {
 // Computer function
 function handleComputerMove() {
     
-     pickMove()
-     checkWin()
+     pickComputerMove()
+     if(!checkWin())
+     handlePlayerChange()
 }
 
- function pickMove() {
+ function pickComputerMove() {
 
       while (true){
                 // Loop through gameState and randomly find avaible spot
-                  m = Math.floor(Math.random()*8)
+                  var m = Math.floor(Math.random()* 8)
                   if (gameState[m] =='' )   // search for empty spot
                   break;
      }
- 
+
+     gameState[m] = currentPlayer
+     document.getElementById(m).innerHTML= currentPlayer
       // m will have the computer move 
 
  }
@@ -119,7 +100,7 @@ function handleComputerMove() {
 function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'));
-
+// check to see if current cell is available cell and game is active
     if (gameState[clickedCellIndex] !== "" || !gameActive) {
         return;
     }
