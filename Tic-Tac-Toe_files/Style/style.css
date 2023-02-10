@@ -82,6 +82,31 @@ a:visited {
     box-shadow: 0 5px 15px rgba(167, 167, 167, 0.4);
 
 }
+.start {
+    color: rgb(65, 65, 65);
+    background-color: rgb(231, 231, 231);
+    font-size: 1.2rem;
+    font-weight: 600;
+    order: 1;
+    margin: 2rem;
+    padding: 0.8rem;
+    border: 0;
+    border-radius: 40px;
+    width: 10rem;
+    cursor: pointer;
+}
+
+.start:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(185, 185, 185);
+    box-shadow: 0 5px 15px rgba(167, 167, 167, 0.4);
+
+}
+
+
+
+
+
 
 /*************************************/
 /******         Footer           *****/
