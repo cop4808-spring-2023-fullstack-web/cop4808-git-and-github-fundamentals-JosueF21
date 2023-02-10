@@ -31,7 +31,7 @@ function handlePlayerChange() {
     statusDisplay.innerHTML = currentPlayerTurn();
 }
 
-function handleResultValidation() {
+function checkWin () {
     let roundWon = false;
     for (let i = 0; i <= 7; i++) {
         const winCondition = winningConditions[i];
@@ -60,10 +60,61 @@ function handleResultValidation() {
         gameActive = false;
         statusDisplay.style.color = "rgb(251,100,204)";
         return;
+   
+
+       } 
     }
 
+ function handleResultValidation() {
+   /*f let roundWon = false;
+    for (let i = 0; i <= 7; i++) {
+        const winCondition = winningConditions[i];
+        let a = gameState[winCondition[0]];
+        let b = gameState[winCondition[1]];
+        let c = gameState[winCondition[2]];
+        if (a === '' || b === '' || c === '') {
+            continue;
+        }
+        if (a === b && b === c) {
+            roundWon = true;
+            break
+        }
+    }
+
+    if (roundWon) {
+        statusDisplay.innerHTML = winningMessage();
+        gameActive = false;
+        statusDisplay.style.color = "rgb(251,100,204)";
+        return;
+    }
+*/
+     checkWin()
+
+    if(gameActive) { 
     handlePlayerChange();
+    handleComputerMove();
+    }
+
 }
+// Computer function
+function handleComputerMove() {
+    
+     pickMove()
+     checkWin()
+}
+
+ function pickMove() {
+
+      while (true){
+                // Loop through gameState and randomly find avaible spot
+                  m = Math.floor(Math.random()*8)
+                  if (gameState[m] =='' )   // search for empty spot
+                  break;
+     }
+ 
+      // m will have the computer move 
+
+ }
 
 function handleCellClick(clickedCellEvent) {
     const clickedCell = clickedCellEvent.target;
