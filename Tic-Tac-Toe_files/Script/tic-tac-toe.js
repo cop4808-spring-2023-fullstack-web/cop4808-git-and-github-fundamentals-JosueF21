@@ -1,7 +1,4 @@
 const statusDisplay = document.querySelector('.status');
-setTimeout(() => {
-    console.log(currentPlayer)
-  }, 5000);
 let gameActive = true;
 let currentPlayer = ''
 let gameState = ["", "", "", "", "", "", "", "", ""];
@@ -33,6 +30,7 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
 
 function handlePlayerChange() {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
+
     statusDisplay.innerHTML = currentPlayerTurn();
 }
 
@@ -98,6 +96,7 @@ function handleComputerMove() {
 
      gameState[m] = currentPlayer
      document.getElementById(m).innerHTML= currentPlayer
+
       // m will have the computer move 
 
  }
