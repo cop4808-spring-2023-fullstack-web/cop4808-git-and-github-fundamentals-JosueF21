@@ -1,7 +1,9 @@
 const statusDisplay = document.querySelector('.status');
-
+setTimeout(() => {
+    console.log(currentPlayer)
+  }, 5000);
 let gameActive = true;
-let currentPlayer = "X";
+let currentPlayer = ''
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningMessage = () => `Player ${currentPlayer} has won!`;
@@ -20,6 +22,9 @@ const winningConditions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
+
+
 
 function handleCellPlayed(clickedCell, clickedCellIndex) {
     gameState[clickedCellIndex] = currentPlayer;
@@ -111,12 +116,28 @@ function handleCellClick(clickedCellEvent) {
 
 function handleRestartGame() {
     gameActive = true;
-    currentPlayer = "X";
+    currentPlayer = "";
     gameState = ["", "", "", "", "", "", "", "", ""];
     statusDisplay.style.color = "rgb(65, 65, 65)";
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 }
+function flipcoin(){
+
+    var flip = Math.floor(Math.random() * 2)
+    console.log(flip);
+
+    if( flip === 0 )
+      { 
+         currentPlayer = "X"
+      } else {
+
+         currentPlayer = "O"
+      }
+
+      statusDisplay.innerHTML = currentPlayerTurn();
+}
 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
+document.querySelector('.start').addEventListener('click', flipcoin);

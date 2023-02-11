@@ -1,4 +1,5 @@
 html,
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@ body {
 
 body {
     color: rgb(65, 65, 65);
-    background-color: rgb(255, 255, 255);
+    background-color: teal;
     font-family: Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
