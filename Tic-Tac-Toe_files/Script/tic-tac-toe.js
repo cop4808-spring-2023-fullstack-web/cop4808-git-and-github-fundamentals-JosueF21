@@ -7,7 +7,8 @@ const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
 
-statusDisplay.innerHTML = currentPlayerTurn();
+
+
 
 const winningConditions = [
     [0, 1, 2],
@@ -45,6 +46,7 @@ function checkWin () {
             continue;
         }
         if (a === b && b === c) {
+       
             roundWon = true;
             break
         }
@@ -55,6 +57,7 @@ function checkWin () {
         gameActive = false;
         statusDisplay.style.color = "rgb(251,100,204)";
         return roundWon;
+        
     }
 
     let roundDraw = !gameState.includes("");
@@ -136,6 +139,8 @@ function flipcoin(){
 
       statusDisplay.innerHTML = currentPlayerTurn();
 }
+
+let score = 0; 
 
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.restart').addEventListener('click', handleRestartGame);
